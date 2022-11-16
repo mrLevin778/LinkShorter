@@ -1,0 +1,17 @@
+<div class="row justify-content-lg-center mx-3 mx-lg-0">
+    <div class="col-lg-6">
+        <div class="text-center">
+            <small>Input here your long URL</small>
+        </div>
+        <form action="{% url 'url-create-by-form' %}" method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                <input required type="url" maxlength="2048" name="long_url" class="form-control" placeholder="Paste long URL">
+                <button class="btn btn-primary" type="submit">MAKE</button>
+            </div>
+        </form>
+        {% if form.errors %}
+        <small class="text-danger"><strong>{{ form.long_link.errors.as_text }}</strong></small>
+        {% endif %}
+    </div>
+</div>

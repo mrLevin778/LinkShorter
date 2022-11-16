@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.mini.css' %}"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    {% block title %}<title>Shorten your URL here</title>{% endblock title %}
+</head>
+
+<body>
+    <div class="content">
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+
+</html>
