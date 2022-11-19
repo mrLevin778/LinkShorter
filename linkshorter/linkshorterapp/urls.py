@@ -1,9 +1,8 @@
 from django.urls import path
-from . import views
+from .views import links, single_link
 
-app_name = "linkshorterapp"
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<str:short_link_hash>', views.redirect_original, name='redirectoriginal'),
-    path('makeshort/', views.shorten_url, name='shortenurl'),
+    path('', links, name='links'),
+    path('links/', links, name='links'),
+    path('links/<int:pk>', single_link, name='single_link')
 ]
